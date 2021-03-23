@@ -1,0 +1,187 @@
+@charset "utf-8";
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    border:none;
+    box-sizing: border-box;
+}
+html{
+	width: 100%;
+	height: 100%;
+}
+.parent{
+	width: 100%;
+    max-width: 750px;
+    min-width: 300px;
+    margin: 0 auto;
+    position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+body{
+	height: 100%;
+}
+h2{
+	text-align: center;
+	font-family: "微软雅黑";
+	font-weight: normal;
+	margin-top: 5%;
+}
+form{
+	text-align: center;
+	margin-top: 5%;
+}
+input[type='text'],input[type='password'],input[type='submit'],#getcode{
+	width: 80%;
+	height: 45px;
+	margin-top: 5%;
+	border: none;
+	border-bottom: 1px solid #CDCDCD;
+	line-height: 45px;
+	border-radius: 0px;
+}
+#getcode{
+	margin:0 auto;
+	margin-top: 5%;
+}
+#input_code{
+	width: 68%;
+	height: 35px;
+	border: none;
+	border-bottom: none;
+	border-radius: 0px;
+	margin-top: 0;
+	text-align:left;
+	padding-top:-10px;
+}
+#code{
+	width:32%;
+	display:block;
+	float:right;
+	text-align:right;
+	padding-right:10px;
+	color:#515151;
+	margin: 0 auto;
+}
+input:focus{
+	outline:none;
+	border-bottom: 1px solid #3385ff;
+}
+input[type='submit']{
+	border: none;
+	background: linear-gradient(135deg,#00d9ad,#0092ee);
+	color:#ffffff;
+	border-radius: 4px;
+	color: #fff;
+	font-size: 18px;
+	font-weight: normal;
+	-webkit-appearance: none; 
+	margin-top: 3.5%;
+}
+.child{
+	width: 100%;
+	padding-left: 11%;
+	padding-right: 11%;
+}
+a{
+	margin-top: 5%;
+	font-size: 14px;
+	color: #666666;
+	text-decoration:none;
+}
+#changdefault,#backdefault{
+	float: left;
+}
+#forget{
+	float: right;
+}
+.slide-box{
+	top: 24%;
+}
+#tip{
+/*     background: linear-gradient(135deg,#00d9ad,#0092ee);
+    -webkit-background-clip: text;
+    color: transparent; */
+	    color: #0092ee;z
+		text-align:left;
+		display:none;
+	}
+	.other p{
+		display:block;
+	    font-size: 14px;
+	    color: #b0b0b0;
+	    width: 80px;
+	    margin:0 auto;
+	    padding-top: 10px;
+	    margin-bottom: 20px;
+	    width: 100%;
+   		text-align:center;
+	}
+	div[class="other"]{
+		clear: both;
+	}
+	[class^="icon_"]{
+		display:block;
+		background: url("../images/icons.png") no-repeat;
+	    width: 18px;
+	    height: 18px;
+	    margin: 5px auto 0;
+	}
+	[class="icon_qqlogin"]{
+	    background-position: -19px 0;
+	}
+	[class="icon_weibologin"]{
+    	background-position: -38px 0;
+	}
+	[class="icon_alipaylogin"]{
+	    width: 26px;
+	    background-position: -57px 0;
+	}
+	[class^="btn_"]{
+		display:inline-block;
+		border-radius: 50%;
+		width: 30px;
+		height: 30px;
+		margin: 0 10px;
+	}
+	.btn_qq {
+	    background-color: #72C7DB;
+	}
+	.btn_alipay {
+	    background-color: #6BB6EA;
+	}
+	.btn_alipay{
+		display: none;
+	}
+	.btn_weibo {
+    	background-color: #ED9090;
+	}
+	.footer{
+		display: none;
+	}
+	.default{
+		display: none;
+	}
+	#backdefault{
+		display: none;
+	}
+	div.l {
+		height: 100%;
+		width: 100%;
+		margin: 0 auto;
+		background-color: rgba(255,255,255,0.6);
+	}
+	.sonic {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);
+	}
+	#cc1 { 
+		width: 100%;
+		height: 100%;
+		display: block;
+	}
+	canvas { display: block; }

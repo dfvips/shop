@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DreamFly手机商城——我的购物车</title>
+	<meta charset="utf-8">
+	<meta name="viewport"
+		content="user-scalable=no,width=device-width,initial-scale=1.0,maximum-scale=1.0">
+	<link rel="icon" href="images/logo-s.png" type="image/x-icon" />
+	<link rel="stylesheet" type="text/css" href="formwork/animate.css" />
+	<link rel="stylesheet" type="text/css" href="css/cart_pc.css" />
+	<script src="formwork/jquery.min.js"></script>
+	<script src="formwork/jquery.cookie.min.js"></script>
+	<script type="text/javascript" src="js/checkdevice.js"></script>
+	<script src="formwork/jquery.scrollAnimations.min.js"></script>
+	<script src="formwork/layer.js"></script>
+<!--     <script type="text/javascript" src="js/protect.js"></script> -->
+</head>
+<body>
+<!-- PC端 -->
+<img src="formwork/theme/default/loading-1.gif" style="display: none">
+<div id="body_pc">
+	<div id="header_pc">
+		<div id="inner">
+			<span id="logo">DreamFly</span>
+			<div id="center">
+				<h2>我的购物车</h2>
+				<p>温馨提示：商品是否购买成功，以最终下单为准哦，请尽快结算</p>
+			</div>
+			<div id="logined"><img src=""><span></span></div>
+			<span id="login" onclick="$.tologin()">登录/注册</span>
+			<span id="home" onclick="$.tohome()">回到主页</span>
+			<span id="list" onclick="$.tolist()">我的订单</span>
+		</div>
+	</div>
+	<div id="blank" onclick="$.tohome()">
+			<span class="iconfont">&#xe615;</span><span>您的购物车空空如也！</span>
+	</div>
+	<div id="content_pc">
+		<div id="item_title">
+			<span class="iconfont">&#xe617;<i>全选</i></span>
+			<span>商品名称</span>
+			<span>单价</span>
+			<span>数量</span>
+			<span>小计</span>
+			<span class="iconfont"><i>操作</i></span>
+		</div>
+		<ul id="cart_list_pc">
+		</ul>
+		<div id="count_pay">
+			<span>共<span></span>件商品，已选<span></span>件商品</span>
+			<span>合计：<span></span></span>
+			<div>下单付款</div>
+		</div>
+	</div>
+    <div class="footer">
+   		<p>Copyright © 2018-2021 DreamFly. All Rights Reserved.</p>                       
+		<p class="nf-intro">Powered By DreamFly</p>
+    </div>
+</div>
+<!-- 手机 -->
+<div id="body_mobile">
+	<div id="header_mobile">
+		<div id="left">
+			<p>购物车</p>
+			<span></span>
+		</div>
+		<div id="right">
+			<p>编辑</p>
+		</div>
+	</div>
+	<div id="nav_tip">您还没有登录</div>
+	<div id="content_mobile">
+		<ul id="cart_list">
+
+		</ul>
+	</div>
+	<div id="btn_action_mobile">
+		<div>删除</div>
+		<div>取消</div>
+	</div>
+	<div id="btn_default_mobile">
+		<div><span class="iconfont">&#xe614;</span>全选</div>
+		<div>购买(0)</div>
+		<div>合计：<span>￥0</span></div>
+	</div>
+	<div id="footer_mobile">
+		<div id="home">
+			<span>&#xe608;</span> <span>首页</span>
+		</div>
+		<div id="type">
+			<span>&#xe606;</span> <span>分类</span>
+		</div>
+		<div id="car">
+			<span class="active">&#xe604;</span> <span class="active">购物车</span><span id="car_num">0</span>
+		</div>
+		<div id="me">
+			<span>&#xe605;</span> <span>我的</span>
+		</div>
+	</div>
+</div>
+</body>
+	<script src="js/cart.js"></script>
+</html>

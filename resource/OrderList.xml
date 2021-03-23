@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mybatis.OrderlistMap">
+  <insert id="insertordermsg">
+    insert into shop.order (uid,orderlist) values (#{0},#{1})
+  </insert>
+  <select id="findorderlist" resultType="entity.OrderInfo">
+	Select * from shop.order Where order.uid=#{0}
+  </select>
+</mapper>

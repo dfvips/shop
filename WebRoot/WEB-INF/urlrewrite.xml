@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE urlrewrite
+    PUBLIC "-//tuckey.org//DTD UrlRewrite 4.0//EN"
+    "http://www.tuckey.org/res/dtds/urlrewrite4.0.dtd">
+<urlrewrite>
+	<rule>
+		<from>^/home$</from>
+		<to type="forward">/home.html</to>
+	</rule>
+	<rule>
+		<from>^/m.home$</from>
+		<to type="forward">/home_mobile.html</to>
+	</rule>
+	<rule>
+		<from>^/m.category$</from>
+		<to type="forward">/home_mobile.html</to>
+	</rule>
+	<rule>
+		<from>^/m.me$</from>
+		<to type="forward">/home_mobile.html</to>
+	</rule>
+	<rule>
+		<from>^/userlogin$</from>
+		<to type="forward">/userlogin.html</to>
+	</rule>
+	<rule>
+		<from>^/m.userlogin$</from>
+		<to type="forward">/userlogin.html</to>
+	</rule>
+	<rule>
+		<from>^/forget$</from>
+		<to type="forward">/forget.html</to>
+	</rule>
+	<rule>
+		<from>^/m.forget$</from>
+		<to type="forward">/forget.html</to>
+	</rule>
+	<rule>
+		<from>^/cart$</from>
+		<to type="forward">/cart.html</to>
+	</rule>
+	<rule>
+		<from>^/m.cart$</from>
+		<to type="forward">/cart.html</to>
+	</rule>
+	<rule>
+		<from>^/item$</from>
+		<to type="forward">/goods.html</to>
+	</rule>
+	<rule>
+		<from>^/m.item$</from>
+		<to type="forward">/goods.html</to>
+	</rule>
+	<rule>
+		<from>^/order$</from>
+		<to type="forward">/order.html</to>
+	</rule>
+	<rule>
+		<from>^/m.order$</from>
+		<to type="forward">/order.html</to>
+	</rule>
+	<rule>
+		<from>^/list$</from>
+		<to type="forward">/list.html</to>
+	</rule>
+	<rule>
+		<from>^/m.list$</from>
+		<to type="forward">/list.html</to>
+	</rule>
+</urlrewrite>

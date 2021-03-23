@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DreamFly手机商城-欢迎登录</title>
+	<meta charset="utf-8"></meta>
+	<meta name="viewport" content="user-scalable=no,width=device-width,initial-scale=1.0,maximum-scale=1.0"></meta>
+	<link rel="icon" href="images/logo-s.png" type="image/x-icon"/>
+	<link rel="Stylesheet" href="css/login_pc.css" type="text/css" />
+	<script src="formwork/jquery.min.js"></script>
+	<script src="formwork/fastclick.js"></script>
+	<script type="text/javascript" src="js/checkdevice.js"></script>
+	<script type="text/javascript" src="js/md5.js"></script>
+	<script type="text/javascript" src="js/sonic.js"></script>
+	<script type="text/javascript" src="js/msgcheck.js"></script>
+	<script type="text/javascript" src="formwork/layer_mobile.js"></script>
+<!--     <script type="text/javascript" src="js/protect.js"></script> -->
+</head>
+<body>
+<div class="parent">
+	<h2>登录/注册</h2>
+	<form onsubmit="return $.login()">
+		<div class="codelogin">
+			<input type="text" placeholder="请输入手机号/邮箱" name="ep" id="ep" required="true" /><br/>
+			<div id="getcode">
+				<input type="text" placeholder="请输入验证码" id="input_code" required="true" />
+				<a id="code" onclick="$.sendcode();">获取验证码</a>
+			</div>
+		</div>
+		<div class="default">
+			<input type="text" placeholder="请输入用户名/邮箱/手机" name="dusername" id="dusername" required="true" /><br/>
+			<input type="password" placeholder="请输入密码" name="password" id="password" required="true" /><br/>
+		</div>
+		<div id="cc">
+			<p id="tip"></p>
+		</div>
+		<input type="submit" value="登录/注册" id="btn" onclick="$.login();"/><br/>
+		<div class="child">
+			<a id="changdefault" onclick="$.changedefault()">账号密码登录</a>
+			<a id="backdefault" onclick="$.backdefault()">验证码登录</a>
+			<a id="forget" onclick="$.forget()">忘记密码？</a>
+		</div>
+		<div class="other">
+			<p>其他方式登录</p>
+			<div>
+				<span class="btn_qq" onclick="$.qqlogin();" ><span class="icon_qqlogin"></span></span>
+				<span class="btn_alipay" onclick="$.alipaylogin();"><span class="icon_alipaylogin"/></span></span>
+				<span class="btn_weibo" onclick="$.weibologin();"><span class="icon_weibologin"/></span></span>
+			</div>
+		</div>
+	</form>
+</div>
+<div id="cc1">
+</div>
+<div class="footer">
+   		<p>Copyright © 2018-2021 DreamFly. All Rights Reserved.</p>   
+   				<p class="nf-intro">Powered By DreamFly</p>                    
+</div>
+</body>
+<script type="text/javascript" src="js/userlogin.js"></script>
+</html>

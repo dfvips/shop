@@ -1,0 +1,210 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'iconfont';  /* project id 1523888 */
+  src: url('//at.alicdn.com/t/font_1523888_5bk3u356ml7.eot');
+  src: url('//at.alicdn.com/t/font_1523888_5bk3u356ml7.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1523888_5bk3u356ml7.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1523888_5bk3u356ml7.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1523888_5bk3u356ml7.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1523888_5bk3u356ml7.svg#iconfont') format('svg');
+}
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+	width: 100%;
+	height: 100%;
+}
+body{
+	display: none;
+}
+#body_mobile{
+	display: none;
+}
+.iconfont{
+	font-family: iconfont;	
+}
+#header_pc{
+	width: 100%;
+	height: 59px;
+	border-bottom: 1px solid #efefef;
+}
+#header_pc>#inner{
+	width: 100%;
+	height:100%;
+	min-width:1240px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+}
+#logo{
+	float: left;
+    font-size: 18px;
+    font-family:pirulen;
+    color: rgba(85,85,85,.4);
+    margin-left: 50px;
+}
+#logo:hover,#inner>#login:hover,#inner>#list:hover,#inner>#home:hover{
+	cursor:pointer;
+	background: linear-gradient(-45deg, #ee7752, #7d72db, #23a6d5, #7ed3f2);
+    background-size: 300% 300%;
+    animation: mybg 5s ease infinite;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+span,p,h2,.iconfont{
+	-moz-user-select: none; 
+	-webkit-user-select: none; 
+	-ms-user-select: none; 
+	-khtml-user-select: none; 
+	user-select: none;
+}
+
+#header_pc>#inner>#center{
+	display:flex;
+	margin: 0 auto;
+	justify-content: center;
+}
+#header_pc>#inner>#center>h2{
+    font-size: 24px;
+    font-weight: normal;
+    color: rgba(85,85,85,.88);
+}
+#header_pc>#inner>#center>p{
+	color: #757575;
+	font-size: 12px;
+	margin-left: 10px;
+	margin-top: 14px;
+}
+#header_pc>#inner>#login,#header_pc>#inner>#list,#header_pc>#inner>#home{
+	color: #555555;
+	margin-right: 10px;
+	font-size: 12px;
+}
+#list{
+	margin-right: 50px!important;
+}
+#logined{
+	height: 100%;
+	display: flex;
+	align-items: center;
+	margin-right: 10px;
+}
+#logined>img{
+	height: 80%;
+	width: auto;
+}
+#logined>span{
+	font-size: 12px;
+	margin-left: 10px;
+}
+#body_pc>#inner{
+	position: absolute;
+	top:50%;
+	left: 50%;
+	-webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    transform:translate(-50%,-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+   	flex-wrap: wrap;
+}
+#body_pc>#inner>.iconfont{
+	font-size:3rem;
+	background: linear-gradient(-45deg, #ee7752, #7d72db, #23a6d5, #7ed3f2)!important;
+    background-size: 900% 900%!important;
+    animation: mybg 6s ease infinite!important;
+    color: transparent!important;
+    -webkit-background-clip: text!important;
+    -webkit-text-fill-color: transparent!important;
+}
+#body_pc>#inner>span:nth-child(2){
+	font-size: 24px;
+    font-weight: normal;
+    color: rgba(85,85,85,.88);
+    margin-left: .5rem;
+    letter-spacing: .1rem;
+}
+#body_pc>#inner>span:nth-child(3){
+	margin-left: 8rem;
+	color: rgba(85,85,85,.88);
+}
+#body_pc>#inner>span:nth-child(3)>span{
+	font-size: 24px;
+    font-weight: normal;
+    color: #F77777;
+}
+#body_pc>#inner>div{
+	width:100%;
+	display: flex;
+	justify-content: center;
+	margin-top: 2rem;
+}
+#body_pc>#inner>div>span{
+	color: rgba(85,85,85,.88);
+}
+#body_pc>#inner>div>span:nth-child(2){
+	margin-left: 2.5rem;
+}
+#body_pc>#inner>div>button{
+	 border: none;
+     outline: none;
+     -webkit-appearance: none;
+     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+     width: 220px;
+     height: 40px;
+     border-radius: 2px;
+}
+#body_pc>#inner>div>button:hover{
+	cursor:pointer;
+	opacity: .66;
+}
+#body_pc>#inner>div>button:nth-child(1){
+	background: linear-gradient(-45deg, #ee7752, #7d72db, #23a6d5, #7ed3f2)!important;
+    background-size: 900% 900%!important;
+    animation: mybg 6s ease infinite!important;
+    color: #fff;
+}
+#body_pc>#inner>div>button:nth-child(2){
+    color: #7d72db;
+    background: #FFF;
+    border: 1px solid #7d72db;
+    margin-left: 2rem;
+}
+#body_pc>.footer{
+	clear:both;
+	display: block;
+	text-align: center;
+	width: 100%;
+	position: absolute;
+	bottom: 10px;
+	left: 0;
+}
+#body_pc>.footer p {
+	color:#999;
+	transition:all 0.3s;
+	opacity: 0.7;
+}
+#body_pc>.footer p:hover{ 
+	text-shadow:3px 3px 3px #999;
+	opacity: 0.8;
+	cursor: pointer;
+}
+.nf-intro {
+    padding: 10px;
+}
+@keyframes mybg{
+	0% {
+		background-position: 20% 50%;
+	}
+	50% {
+		background-position: 90% 50%;
+	}100% {
+		background-position: 20% 50%;
+	}
+}

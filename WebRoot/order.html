@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<title>DreamFly手机商城</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="user-scalable=no,width=device-width,initial-scale=1.0,maximum-scale=1.0">
+	<link rel="icon" href="images/logo-s.png" type="image/x-icon"/>
+	<link rel="stylesheet" type="text/css" href="css/order_pc.css"/>
+	<script src="formwork/jquery.min.js"></script>
+	<script src="formwork/jquery.cookie.min.js"></script>
+	<script type="text/javascript" src="js/checkdevice.js"></script>
+	<script src="formwork/layer_mobile.js"></script>
+<!--     <script type="text/javascript" src="js/protect.js"></script> -->
+  </head>
+  
+  <body>
+  <div id="body_pc">
+  	<div id="header_pc">
+		<div id="inner">
+			<span id="logo">DreamFly</span>
+			<div id="center">
+				<h2>交易结果确认</h2>
+				<p>温馨提示：商品是否购买成功，交易结果显示为准</p>
+			</div>
+			<div id="logined"><img src=""><span></span></div>
+			<span id="login" onclick="$.tologin()">登录/注册</span>
+			<span id="home" onclick="$.backpc()">回到主页</span>
+			<span id="list" onclick="$.tolist()">我的订单</span>
+		</div>
+	</div>
+  	<div id="inner">
+  		<span class="iconfont">&#xe61a;</span><span>交易成功</span>
+  		<span>付款金额：<span></span></span>
+  		<br/>
+  		<div>
+  			<span>订单编号：<span id="num"></span></span>
+  			<span>购买时间：<span id="time"></span></span>
+  		</div>
+	  	<div>
+	  		<button onclick="$.tolist()">查看订单</button>
+  			<button onclick="$.backpc()">再去逛逛</button>
+  		</div>
+  	</div>
+    <div class="footer">
+   		<p>Copyright © 2018-2021 DreamFly. All Rights Reserved.</p>                       
+				<p class="nf-intro">Powered By DreamFly</p>
+    </div>
+  </div>
+  <div id="body_mobile">
+	    <div id="order_success">
+	    	<div id="section">
+   		    	<span class="iconfont">&#xe61a;</span><span>下单成功</span>
+	    	</div>
+	    	<aside id="order_info">
+	    		<div>
+		    		<span>订单编号：<span id="order_num"></span></span>
+		    		<span>下单时间：<span id="order_time"></span></span>
+		    		<span>订单总额：<span id="order_price"></span></span>
+	    		</div>
+	    	</aside>
+	    	<button id="back" onclick="$.back()">返回</button>
+	    	<button id="look" onclick="$.tolist()">查看订单</button>
+	    </div>
+    </div>
+  </body>
+  <script src="js/order.js"></script>
+</html>

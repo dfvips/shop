@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DreamFly手机商城——我的订单</title>
+	<meta charset="utf-8">
+	<meta name="viewport"
+		content="user-scalable=no,width=device-width,initial-scale=1.0,maximum-scale=1.0">
+	<link rel="icon" href="images/logo-s.png" type="image/x-icon" />
+	<link rel="stylesheet" type="text/css" href="css/list_pc.css" />
+	<script src="formwork/jquery.min.js"></script>
+	<script src="formwork/jquery.cookie.min.js"></script>
+	<script type="text/javascript" src="js/checkdevice.js"></script>
+	<script src="formwork/layer.js"></script>
+<!--     <script type="text/javascript" src="js/protect.js"></script> -->
+</head>
+<body>
+<!-- PC端 -->
+<div id="body_pc">
+	<div id="header_pc">
+		<div id="inner">
+			<span id="logo">DreamFly</span>
+			<div id="center">
+				<h2>我的订单</h2>
+				<p>温馨提示：请谨防钓鱼信息,订单详情以官网为准</p>
+			</div>
+			<div id="logined"><img src=""><span></span></div>
+			<span id="login" onclick="$.tologin()">登录/注册</span>
+			<span id="home" onclick="$.tohome()">回到主页</span>
+			<span id="cart" onclick="$.tocart()"><em class="iconfont-cart"></em><span>购物车</span></span>
+		</div>
+	</div>
+	<div id="blank" onclick="$.tohome()">
+		<span class="iconfont">&#xe620;</span><span>暂无订单记录</span>
+	</div>
+	<div id="content_pc"></div>
+	<div class="footer_pc">
+		<p>Copyright © 2018-2021 DreamFly. All Rights Reserved.</p>
+				<p class="nf-intro">Powered By DreamFly</p>
+	</div>
+</div>
+<!-- 手机 -->
+<div id="body_mobile">
+	<div id="header_mobile">
+		<div id="back" onclick="$.back()" class="iconfont">&#xe60b;</div>
+		<div id="header_center">我的订单</div>
+		<div id="header_right" class="iconfont" onclick="$.home()" >&#xe61f;</div>
+	</div>
+	<div id="center_mobile"></div>
+	<div id="footer_mobile">暂无更多订单记录</div>
+</div>
+</body>
+	<script src="js/list.js"></script>
+</html>

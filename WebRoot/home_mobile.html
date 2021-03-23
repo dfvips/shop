@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DreamFly手机商城</title>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="user-scalable=no,width=device-width,initial-scale=1.0,maximum-scale=1.0">
+<link rel="icon" href="images/logo-s.png" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="formwork/animate.css" />
+<link rel="stylesheet" type="text/css"
+	href="formwork/bootstrap_4.3.1.min.css" />
+<link rel="stylesheet" type="text/css" href="css/home_mobile.css" />
+<script src="formwork/jquery.min.js"></script>
+<script src="formwork/jquery.cookie.min.js"></script>
+<script src="formwork/popper.min.js"></script>
+<script type="text/javascript" src="js/checkdevice.js"></script>
+<script type="text/javascript" src="js/msgcheck.js"></script>
+<script type="text/javascript" src="js/md5.js"></script>
+<script src="formwork/bootstrap_4.3.1.min.js"></script>
+<script src="formwork/jquery.scrollAnimations.min.js"></script>
+<script src="formwork/layer_mobile.js"></script>
+<!-- <script type="text/javascript" src="js/protect.js"></script> -->
+</head>
+<body>
+	<div id="header">
+		<!-- 标题 -->
+		<span id="logo">DreamFly</span>
+		<div id="search">
+			<input type="text" id="search_text" placeholder="请输入您要搜索的商品"  autocomplete="off" list="source"/> <span
+				class="btnserach_iconfont"></span>
+	  			<datalist id="source">
+				</datalist>
+		</div>
+		<span class="user" onclick="$.tome()">&#xe603;</span>
+		<!-- 		导航 -->
+		<div id="nav_title" data-animation="fadeIn"
+			data-animation-delay="500ms">
+			<h2 class="active_title" id="box_slideshow">推荐</h2>
+			<h2 id="box_phone">手机</h2>
+			<h2 id="box_tv">电视</h2>
+			<h2 id="box_pc">电脑</h2>
+			<h2 id="box_earphone">耳机</h2>
+			<h2 id="box_watch">手环配件</h2>
+		</div>
+	</div>
+	<!-- 	图片轮播 -->
+	<div id="silide_home" class="carousel slide" data-ride="carousel">
+		<ul class="carousel-indicators">
+			<li data-target="#silide_home" data-slide-to="0" class="active"></li>
+			<li data-target="#silide_home" data-slide-to="1"></li>
+			<li data-target="#silide_home" data-slide-to="2"></li>
+			<li data-target="#silide_home" data-slide-to="3"></li>
+			<li data-target="#silide_home" data-slide-to="4"></li>
+		</ul>
+		<div class="carousel-inner">
+			<div class="carousel-item active" onclick="javascript:window.location.href='m.item?product=cc9pro';" >
+				<img src="images/01.jpg">
+			</div>
+			<div class="carousel-item" onclick="javascript:window.location.href='m.item?product=redminote8pro';" >
+				<img src="images/02.jpg">
+			</div>
+			<div class="carousel-item" onclick="javascript:window.location.href='m.item?product=mi9pro5g';" >
+				<img src="images/03.jpg">
+			</div>
+			<div class="carousel-item" onclick="javascript:window.location.href='m.item?product=cc9e';" >
+				<img src="images/04.jpg">
+			</div>
+			<div class="carousel-item" onclick="javascript:window.location.href='m.item?product=miearpodskmusic';" >
+				<img src="images/05.jpg">
+			</div>
+		</div>
+	</div>
+	<!-- 内容 -->
+	<div id="content">
+		<div id="box_slideshow">
+			<h2>- 新品推荐 -</h2>
+		</div>
+		<div id="box_phone" data-animation-container onclick="javascript:window.location.href='m.item?product=redminote8pro';" >
+			<img src="images/tuijian1.jpg" id="showtop">
+		</div>
+		<div id="box_tv" data-animation-container onclick="javascript:window.location.href='m.item?product=mitv4a';" >
+			<img src="images/tuijian2.jpg" id="showtop">
+		</div>
+		<div id="box_pc" data-animation-container onclick="javascript:window.location.href='m.item?product=redmipc14zq';" >
+			<img src="images/tuijian3.jpg" id="showtop">
+		</div>
+		<div id="box_earphone" data-animation-container onclick="javascript:window.location.href='m.item?product=miearpodskmusic';"  >
+			<img src="images/tuijian4.jpg" id="showtop">
+		</div>
+		<div id="box_watch" data-animation-container onclick="javascript:window.location.href='m.item?product=miearpodskmusic';" >
+			<img src="images/tuijian5.jpg" id="showtop">
+		</div>
+	</div>
+	<!-- 分类导航 -->
+	<section class="aui-flexView">
+		<section class="aui-scrollView">
+			<div class="m-scrolltab" data-ydui-scrolltab>
+				<div class="scrolltab-nav">
+					<a class="scrolltab-item">
+						<div class="scrolltab-title">手机</div>
+					</a> <a class="scrolltab-item">
+						<div class="scrolltab-title">电视</div>
+					</a> <a class="scrolltab-item">
+						<div class="scrolltab-title">笔记本</div>
+					</a> <a class="scrolltab-item">
+						<div class="scrolltab-title">耳机</div>
+					</a><a class="scrolltab-item">
+						<div class="scrolltab-title">手环</div>
+					</a>
+				</div>
+				<div class="scrolltab-content">
+					<div class="scrolltab-content-item">
+					</div>
+					<div class="scrolltab-content-item">
+					</div>
+					<div class="scrolltab-content-item">
+					</div>
+					<div class="scrolltab-content-item">
+					</div>
+					<div class="scrolltab-content-item">
+					</div>
+				</div>
+			</div>
+		</section>
+	</section>
+	<!-- 	我的 -->
+	<div id="title_me"><p><span>&#xe61e;</span>个人中心</p></div>
+	<section class="aboutme">
+		<ul>
+			<li>头像：<img src="" onclick="$.upload();" ><input type="file" name="file" id="file" accept="image/png,image/jpeg" style="display: none" onchange="$.uploadImg(this)" ><a onclick="$.upload();" >&#xe61d;</a></li>
+			<li>昵称：<span onclick="$.changname()" ></span><a onclick="$.changname()" >&#xe61d;</a></li>
+			<li>性别：<span onclick="$.changsex()" ></span><a  onclick="$.changsex()" >&#xe61d;</a></li>
+			<li>手机：<span onclick="$.changephone()" ></span><a onclick="$.changephone()" >&#xe61d;</a></li>
+			<li>邮箱：<span onclick="$.changeemail()" ></span><a onclick="$.changeemail()" >&#xe61d;</a></li>
+			<li onclick="$.changepwd()" >密码修改</li>
+			<li onclick="$.tolist()" >我的订单</li>
+			<li onclick="$.aboutus()" >关于我们</li>
+			<li onclick="$.logoutmobile()" >退出登录</li>
+		</ul>
+	</section>
+	<!-- 	底部 -->
+	<div id="footer">
+		<div id="home">
+			<span>&#xe608;</span> <span>首页</span>
+		</div>
+		<div id="type">
+			<span>&#xe606;</span> <span>分类</span>
+		</div>
+		<div id="car" onclick="$.tocar()">
+			<span>&#xe604;</span> <span>购物车</span><span id="car_num">0</span>
+		</div>
+		<div id="me">
+			<span>&#xe605;</span> <span>我的</span>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="js/home_mobile.js"></script>
+<script type="text/javascript" src="js/home_all.js"></script>
+<script src="formwork/ydui.js"></script>
+</html>

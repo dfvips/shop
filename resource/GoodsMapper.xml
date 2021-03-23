@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mybatis.GoodsMapper">
+  <select id="findgoods" resultType="entity.GoodsInfo">
+	Select * from goods inner join category on cid=category.id  and cid=(Select id from category Where cname=#{0})
+  </select>
+  <select id="findgoodsById" resultType="entity.GoodsInfo">
+	Select * from goods inner join category on cid=category.id  and goods.id=#{0}
+  </select>
+</mapper>

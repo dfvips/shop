@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mybatis.GoodsMsgMapper">
+  <select id="findgoodsmsg" resultType="entity.GoodsmsgInfo">
+	Select * from goods_msg inner join goods on gid=goods.id  and (gid=(Select id from goods Where link_name=#{0}) or gid=#{0} or goods.name like "%"#{0}"%") 
+  </select>
+  <select id="searchgood" resultType="entity.GoodsmsgInfo">
+	Select * from goods_msg inner join goods on gid=goods.id  where goods.name like "%"#{0}"%"
+  </select>
+</mapper>

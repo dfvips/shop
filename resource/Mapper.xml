@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mybatis.Mapper">
+  <select id="findbloginid" resultType="entity.CustomerInfo">
+	Select * from customer Where loginid=#{0}
+  </select>
+  <select id="findbyemail" resultType="entity.CustomerInfo">
+	Select * from customer Where email=#{0}
+  </select>
+  <select id="findbyphone" resultType="entity.CustomerInfo">
+	Select * from customer Where phone=#{0}
+  </select>
+  <select id="findbyep" resultType="entity.CustomerInfo">
+	Select * from customer Where (phone=#{0} or email=#{0}) and password=#{1}
+  </select>
+  <insert id="insertbyloginid">
+    insert into customer (username,loginid,figureurl) values (#{0},#{1},#{2})
+  </insert>
+  <insert id="insertbyphone">
+    insert into customer (phone,figureurl,username) values (#{0},#{1},#{2})
+  </insert>
+  <insert id="insertbyemail">
+    insert into customer (email,figureurl,username) values (#{0},#{1},#{2})
+  </insert>
+  <update id="updatemsg">
+    Update customer set password = #{1} where (email = #{0} or phone= #{0})
+  </update>
+  <update id="updatepwd">
+    Update customer set password = #{1} where uid = #{0}
+  </update>
+  <update id="updatefigureurl">
+    Update customer set figureurl = #{1} where uid = #{0}
+  </update>
+  <update id="updatesex">
+    Update customer set gender = #{1} where uid = #{0}
+  </update>  
+  <update id="updateemail">
+    Update customer set email = #{1} where uid = #{0}
+  </update>  
+  <update id="updatephone">
+    Update customer set phone = #{1} where uid = #{0}
+  </update>  
+  <update id="updateusername">
+    Update customer set username = #{1} where uid = #{0}
+  </update>  
+</mapper>
