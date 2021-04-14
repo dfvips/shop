@@ -52,8 +52,8 @@ let checktype=0;
 		loadcss: function () {
 			let flag = $.IsPC();
 			if (flag == true) {
-				if($('link[href="css/cart_mobile.css"]')[0]!=undefined){
-					$('link[href="css/cart_mobile.css"]')[0].setAttribute("href", "css/cart_pc.css");
+				if($('link[href="https://cdn.jsdelivr.net/gh/dfvips/shop/WebRoot/css/cart_mobile.css"]')[0]!=undefined){
+					$('link[href="https://cdn.jsdelivr.net/gh/dfvips/shop/WebRoot/css/cart_mobile.css"]')[0].setAttribute("href", "https://cdn.jsdelivr.net/gh/dfvips/shop/WebRoot/css/cart_pc.css");
 				}
 				$('html,body').animate({scrollTop: 61},500);
 				 var stateObject = {};    
@@ -61,8 +61,8 @@ let checktype=0;
 			  	 var newUrl = 'cart';    
 				 history.pushState(stateObject, title, newUrl);
 			} else {
-				if($('link[href="css/cart_pc.css"]')[0]!=undefined){
-					$('link[href="css/cart_pc.css"]')[0].setAttribute("href", "css/cart_mobile.css");
+				if($('link[href="https://cdn.jsdelivr.net/gh/dfvips/shop/WebRoot/css/cart_pc.css"]')[0]!=undefined){
+					$('link[href="https://cdn.jsdelivr.net/gh/dfvips/shop/WebRoot/css/cart_pc.css"]')[0].setAttribute("href", "https://cdn.jsdelivr.net/gh/dfvips/shop/WebRoot/css/cart_mobile.css");
 				}
 				 var stateObject = {};    
 			 	 var title = $("title").html();     

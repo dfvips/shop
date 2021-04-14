@@ -6,8 +6,8 @@
 		loadcss: function() {
 			let flag = $.IsPC();
 			if (flag == true) {
-				if($('link[href="css/order_mobile.css"]')[0]!=undefined){
-					$('link[href="css/order_mobile.css"]')[0].setAttribute("href", "css/order_pc.css");
+				if($('link[href="https://cdn.jsdelivr.net/gh/dfvips/shop/WebRoot/css/order_mobile.css"]')[0]!=undefined){
+					$('link[href="https://cdn.jsdelivr.net/gh/dfvips/shop/WebRoot/css/order_mobile.css"]')[0].setAttribute("href", "https://cdn.jsdelivr.net/gh/dfvips/shop/WebRoot/css/order_pc.css");
 				}
 				$('html,body').animate({scrollTop: 61},500);
 				 let stateObject = {};    
@@ -15,8 +15,8 @@
 			  	 let newUrl = 'order';    
 				 history.pushState(stateObject, title, newUrl);
 			} else {
-				if($('link[href="css/order_pc.css"]')[0]!=undefined){
-					$('link[href="css/order_pc.css"]')[0].setAttribute("href", "css/order_mobile.css");
+				if($('link[href="https://cdn.jsdelivr.net/gh/dfvips/shop/WebRoot/css/order_pc.css"]')[0]!=undefined){
+					$('link[href="https://cdn.jsdelivr.net/gh/dfvips/shop/WebRoot/css/order_pc.css"]')[0].setAttribute("href", "https://cdn.jsdelivr.net/gh/dfvips/shop/WebRoot/css/order_mobile.css");
 				}
 				 let stateObject = {};    
 			 	 let title = $("title").html();     

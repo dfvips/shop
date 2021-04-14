@@ -45,16 +45,16 @@ $(document).ready(function() {
 		loadcss : function() {
 			let flag = $.IsPC();
 			if (flag == true) {
-				if($('link[href="css/forget_mobile.css"]')[0]!=undefined){
-					$('link[href="css/forget_mobile.css"]')[0].setAttribute("href", "css/forget_pc.css");
+				if($('link[href="https://cdn.jsdelivr.net/gh/dfvips/shop/WebRoot/css/forget_mobile.css"]')[0]!=undefined){
+					$('link[href="https://cdn.jsdelivr.net/gh/dfvips/shop/WebRoot/css/forget_mobile.css"]')[0].setAttribute("href", "https://cdn.jsdelivr.net/gh/dfvips/shop/WebRoot/css/forget_pc.css");
 				}
 				 var stateObject = {};    
 			 	 var title = $("title").html();     
 			  	 var newUrl = 'forget';    
 				 history.pushState(stateObject, title, newUrl);
 			} else {
-				if($('link[href="css/forget_pc.css"]')[0]!=undefined){
-					$('link[href="css/forget_pc.css"]')[0].setAttribute("href", "css/forget_mobile.css");
+				if($('link[href="https://cdn.jsdelivr.net/gh/dfvips/shop/WebRoot/css/forget_pc.css"]')[0]!=undefined){
+					$('link[href="https://cdn.jsdelivr.net/gh/dfvips/shop/WebRoot/css/forget_pc.css"]')[0].setAttribute("href", "https://cdn.jsdelivr.net/gh/dfvips/shop/WebRoot/css/forget_mobile.css");
 				}
 				 var stateObject = {};    
 			 	 var title = $("title").html();     

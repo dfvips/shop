@@ -461,8 +461,8 @@ let startX=0;
 		loadcss : function() {
 			let flag = $.IsPC();
 			if (flag == true) {
-				if($('link[href="css/goods_mobile.css"]')[0]!=undefined){
-					$('link[href="css/goods_mobile.css"]')[0].setAttribute("href", "css/goods_pc.css");
+				if($('link[href="https://cdn.jsdelivr.net/gh/dfvips/shop/WebRoot/css/goods_mobile.css"]')[0]!=undefined){
+					$('link[href="https://cdn.jsdelivr.net/gh/dfvips/shop/WebRoot/css/goods_mobile.css"]')[0].setAttribute("href", "https://cdn.jsdelivr.net/gh/dfvips/shop/WebRoot/css/goods_pc.css");
 				}
 				$('html,body').animate({scrollTop: 61},500);
 				 var stateObject = {};    
@@ -470,8 +470,8 @@ let startX=0;
 			  	 var newUrl = 'item?product='+parm;    
 				 history.pushState(stateObject, title, newUrl);
 			} else {
-				if($('link[href="css/goods_pc.css"]')[0]!=undefined){
-					$('link[href="css/goods_pc.css"]')[0].setAttribute("href", "css/goods_mobile.css");
+				if($('link[href="https://cdn.jsdelivr.net/gh/dfvips/shop/WebRoot/css/goods_pc.css"]')[0]!=undefined){
+					$('link[href="https://cdn.jsdelivr.net/gh/dfvips/shop/WebRoot/css/goods_pc.css"]')[0].setAttribute("href", "https://cdn.jsdelivr.net/gh/dfvips/shop/WebRoot/css/goods_mobile.css");
 				}
 				 var stateObject = {};    
 			 	 var title = $("title").html();     

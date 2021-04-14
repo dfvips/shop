@@ -244,16 +244,16 @@ $(document).ready(function() {
 		loadcss : function() {
 			let flag = $.IsPC();
 			if (flag == true) {
-				if($('link[href="css/login_mobile.css"]')[0]!=undefined){
-					$('link[href="css/login_mobile.css"]')[0].setAttribute("href", "css/login_pc.css");
+				if($('link[href="https://cdn.jsdelivr.net/gh/dfvips/shop/WebRoot/css/login_mobile.css"]')[0]!=undefined){
+					$('link[href="https://cdn.jsdelivr.net/gh/dfvips/shop/WebRoot/css/login_mobile.css"]')[0].setAttribute("href", "https://cdn.jsdelivr.net/gh/dfvips/shop/WebRoot/css/login_pc.css");
 				}
 			 	 var stateObject = {};    
 			 	 var title = $("title").html();     
 			  	 var newUrl = 'userlogin';    
 				 history.pushState(stateObject, title, newUrl);
 			} else {
-				if($('link[href="css/login_pc.css"]')[0]!=undefined){
-					$('link[href="css/login_pc.css"]')[0].setAttribute("href", "css/login_mobile.css");
+				if($('link[href="https://cdn.jsdelivr.net/gh/dfvips/shop/WebRoot/css/login_pc.css"]')[0]!=undefined){
+					$('link[href="https://cdn.jsdelivr.net/gh/dfvips/shop/WebRoot/css/login_pc.css"]')[0].setAttribute("href", "https://cdn.jsdelivr.net/gh/dfvips/shop/WebRoot/css/login_mobile.css");
 				}
 				 var stateObject = {};    
 			 	 var title = $("title").html();     
