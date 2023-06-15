@@ -83,12 +83,12 @@ public class TakeOrder extends HttpServlet {
  	 	     	thisObj.element("name", name);	
  	 	     	thisObj.element("price", price);	
  	 	     	thisObj.element("img", img);
- 	 	     	priceall+=(Double.parseDouble(price.replace("��", ""))*Integer.parseInt(num));
+ 	 	     	priceall+=(Double.parseDouble(price.replace("￥", ""))*Integer.parseInt(num));
  	 	     	alljsoncallback.element(thisObj);
  	 	    }
  	 	    all.element("data", alljsoncallback);
  	 	    DecimalFormat df = new DecimalFormat(".00");
- 	 	    all.element("priceall", "��"+df.format(priceall));
+ 	 	    all.element("priceall", "￥"+df.format(priceall));
  	 	    all.element("ordertime", nowtime);
  	 	    all.element("ordernum", listnum);
  	 	    OrderInfo i=new OrderInfo();

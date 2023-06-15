@@ -68,7 +68,7 @@ public class Login extends HttpServlet {
 					|| request.getParameter("state").equals("dreamflyqqlogin"))) {
 				if (request.getParameter("state").equals("qqlogin")) {
 					response.sendRedirect(
-							"https://graph.qq.com/oauth2.0/authorize?response_type=code&client_id=client_id&redirect_uri=https://shop.dfvips.com/Login&state=dreamflyqqlogin&scope=get_user_info");
+							"https://graph.qq.com/oauth2.0/authorize?response_type=code&client_id=101705620&redirect_uri=https://shop.dfvips.com/Login&state=dreamflyqqlogin&scope=get_user_info");
 				} else {
 					qqlogin(request, response);
 					logincheck(response);
@@ -77,7 +77,7 @@ public class Login extends HttpServlet {
 					|| request.getParameter("state").equals("dreamflyalipaylogin"))) {
 				if (request.getParameter("state").equals("alipaylogin")) {
 					response.sendRedirect(
-							"https://openauth.alipay.com/oauth2/publicAppAuthorize.htm?app_id=app_id&scope=auth_user&redirect_uri=https://shop.dfvips.com/Login&state=dreamflyalipaylogin");
+							"https://openauth.alipay.com/oauth2/publicAppAuthorize.htm?app_id=2019110268815931&scope=auth_user&redirect_uri=https://shop.dfvips.com/Login&state=dreamflyalipaylogin");
 				} else {
 					alipay_login(request, response);
 					logincheck(response);
@@ -86,7 +86,7 @@ public class Login extends HttpServlet {
 					|| request.getParameter("state").equals("dreamflyweibologin"))) {
 				if (request.getParameter("state").equals("weibologin")) {
 					response.sendRedirect(
-							"https://api.weibo.com/oauth2/authorize?client_id=client_id&response_type=code&redirect_uri=https://shop.dfvips.com/Login&state=dreamflyweibologin");
+							"https://api.weibo.com/oauth2/authorize?client_id=36124209&response_type=code&redirect_uri=https://shop.dfvips.com/Login&state=dreamflyweibologin");
 				} else {
 					weibo_login(request, response);
 					logincheck(response);
@@ -110,7 +110,7 @@ public class Login extends HttpServlet {
 			userinfo1 = dbservice.findCustomer(c);
 			if (userinfo1 == null) {
 				c.setFigureurl("http://shop.dfvips.com/images/logo-l.png");
-				c.setUsername("DreamFly用户");
+				c.setUsername("DreamFly鐢ㄦ埛");
 				int result = dbservice.insertcustomer(c);
 				if (result == 1) {
 					CustomerInfo userinfo2 = dbservice.findCustomer(c);
@@ -255,7 +255,7 @@ public class Login extends HttpServlet {
 
 	public static void qqlogin(HttpServletRequest request, HttpServletResponse response) {
 		String code = request.getParameter("code");
-		String url = "https://graph.qq.com/oauth2.0/token?grant_type=authorization_code&client_id=client_id&client_secret=client_secret&code="
+		String url = "https://graph.qq.com/oauth2.0/token?grant_type=authorization_code&client_id=101705620&client_secret=81d5dd8ea7450f4bb58335d14f08676f&code="
 				+ code + "&redirect_uri=https://shop.dfvips.com/Login";
 		String result = GetHtmlSrc.GetHtml(url);
 		if (result != null) {
@@ -286,10 +286,10 @@ public class Login extends HttpServlet {
 		String auth_code = request.getParameter("auth_code");
 		String URL = "https://openapi.alipay.com/gateway.do";
 		String APP_ID = "2019110268815931";
-		String APP_PRIVATE_KEY = "Your APP_PRIVATE_KEY";
+		String APP_PRIVATE_KEY = "MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCjkC6tzhmDFLrLrp6bDxLx70euUeyiU8wKjNOsb7Kqp1SOyM+YWJ0nKI/YhMoYdWs8L3gYPIeYMGvlshyVZpptqRHEbTbF8x4qQavLFb4/4N5wuAZXuoDK/jbd3xRjbU9xTCtdgSHn9lnHGhIoNzzuJMFOcpVmS5Ab19S3WWLEeebg1IATrqSCmrFwuyg5fDdNA+Mv6LtGvwCIEodY8XxA7RcRbcZSB+8MYxgUp6Bf5hSqYHluxsF5/K+ip7mKbJ6kcYSZMj7TD8FC/Kl739Ez5jqfohAl+izX3O3NaxEMn59KsjBncHDeLMTV2M/b7VVbzuWM5jElVrVSFLIBBNjXAgMBAAECggEAEUaHR6A/HZMw75Zv9hyveZI2VfkdLz/+ixa4vLvHeTLXQYWAN60UXDBykQHlfpPYUbEJ1DWAdNiYbNhVIIqHwRFcaQzH/jxhcUEibf7L619K30jwko+GTupuzRxkwOOowmSzJ9sdw6xHazobtNewvc5wBGMh2H4eqHIxa3QrdGjnZ9LkzecVkIkqPIlfCAvdWOkyHqbTtAtl1+ESqnEJ1iOfRQe7zMnupvcPDjfHgokzdhUOQ2O+HCAQXvBxn+aDg1aBHXaaKSVmwW0vEBOx/N+e6UFsN5p2VnKFncSsOtne4/C+k6YFXXsEQIbAkm95BN1K6KVGhYWk4pLQg//KAQKBgQD/hzBcTX6trVbRX6mdVn2LyQxaus0gTNHzVyfbKRXYYvlEosGZTCouX0WtgMPWWJWYLszH17UMjyp0fhiDTXGfCL7cBHzglnWeHvdU0NL0VF3Ibr2ENNQjXei6Ruu5lETvGDnsKZ05pgCPM7pZPyhCBJoMsKXCJs3+mij87cGmVwKBgQCj3YNsTnBV0iGshc2VMI2Yxezq6cr32L998ZEm/X9RpWM8/qY6UVKROuuivtVzGwmNTLyVsCTPCFPgfv2yo1iDuAbQ99W0o7p26i5KVxHQ8YV+zpQEGbs7ExuflJ1MZIcBDNWFGJj3VI/aX/SOroUwLOLAhwjqRJMgx3cFX5XRgQKBgANCcjd7NZZ5k5XwJnW/WLKjyeiOYXd8A2GbRwLgr0qnWI6rlNSjyBX3WSgxcE4XqzDZx/r0oXabjOsXgLCMGFry/ZxI4l7rDG0L8BPA5i//s4KPBxPcqKga1pEpvnALmCWEpZiBn2PQ3kj1W/cvew/8hwqKZlLns9D/nm47ijDZAoGAZLqgNQ2qpDa9mG3PyCvGfuj8EBOTPvOwEt1R2uPtReUisbXfvO2MkdXkT3B7iXxPTNqk+mcC2XlHBjNKBGvA14diOUZ/ycDzuHGP7wbC3uv4odCe0D55B4Fhc6FJaFJLYuvevSg3r6H9o8Fkdej12n1dDfh0FH3+6yFyGo19bQECgYEAtQ+/8WpGROriRV4gg3O6Iwm3cxbuiL5ql3s1bw1LaCVA8I3gHaQeRm8FjtC3isvDBbDNlW6C8qtTao3zP1MyA85XERARKN9doPAWZpOT/erR/hBuLCKhOrwcCUVKZXyboo4w/0kVTipvzu8HZQoVfXfgf4X5PTciMZRLfcR0ZIQ=";
 		String FORMAT = "json";
 		String CHARSET = "UTF-8";
-		String ALIPAY_PUBLIC_KEY = "Your ALIPAY_PUBLIC_KEY";
+		String ALIPAY_PUBLIC_KEY = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAk5h5CKhgXQpR43AP1LCP3qZar2cJBSGm6WDgMWT96OaOG9GaokuzXlArLjJof3gtuVKhRwGZLWaevUZipONVIHYbdPlQRfAaSmKu1ZGejfjPps764idsCT7m6FamaWqZCIf+m2XHQREy2KbtEtyUoZg1iD3jqMXn+bJQhi4aCY1Iwh4Fh7vwkN8LiVZT/hVIRIDHqbSM8RI0r1rJxu885ZoLgpxtS1WecUq/I5NWhZqb1DY9Yol3aYCOdxdEsXZ3mLB3s1G9UBuSkohe2BtpdFg+HujeG7wPPxOBfX1v7x0piLwm4YjeRZMt2o/lZIDFjw9+V/KnYHNAY8NnKWC/xQIDAQAB";
 		String SIGN_TYPE = "RSA2";
 		String accessToken = "";
 		AlipayClient alipayClient = new DefaultAlipayClient("https://openapi.alipay.com/gateway.do",
@@ -322,14 +322,14 @@ public class Login extends HttpServlet {
 
 	public static void weibo_login(HttpServletRequest request, HttpServletResponse response) {
 		String code = request.getParameter("code");
-		String url = "https://api.weibo.com/oauth2/access_token?client_id=client_id&client_secret=client_secret&grant_type=authorization_code&redirect_uri=https://shop.dfvips.com/Login&code="
+		String url = "https://api.weibo.com/oauth2/access_token?client_id=36124209&client_secret=b4d8b4eb4a5eeddfb8cea9dfae27b8ca&grant_type=authorization_code&redirect_uri=https://shop.dfvips.com/Login&code="
 				+ code;
 		String result = GetHtmlSrc.PostHtml(url);
 		if (result != null) {
 			JsonObject tokenjson = new JsonParser().parse(result).getAsJsonObject();
 			String access_token = tokenjson.get("access_token").getAsString();
 			String uid = tokenjson.get("uid").getAsString();
-			String nickname = "微博用户";
+			String nickname = "Dreamfly鐢ㄦ埛";
 			String figureurl = "https://weibo.com/favicon.ico";
 			String OpenIDjson = GetHtmlSrc.PostHtml(
 					"https://api.weibo.com/2/eps/user/info.json?access_token=" + access_token + "&uid=" + uid);

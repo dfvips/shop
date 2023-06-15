@@ -4,3 +4,15 @@ src/shop/Login.java
 src/shop/Login.java
 src/shop/Login.java
 src/tool/SendEmail.java
+bin/entity/CustomerInfo.class
+bin/entity/GoodsCarInfo.class
+bin/entity/GoodsInfo.class
+bin/entity/GoodsmsgInfo.class
+bin/entity/OrderInfo.class
+bin/filter/Apifilter.class
+bin/mybatis/GoodsMapper.class
+bin/mybatis/GoodsMsgMapper.class
+bin/mybatis/Mapper.class
+bin/mybatis/MybatisReader.class
+bin/mybatis/OrderlistMap.class
+*.class
