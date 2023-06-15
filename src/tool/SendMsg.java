@@ -9,14 +9,14 @@ import java.io.IOException;
 public class SendMsg {
 	
 	public static boolean sendMsg(String phone,int templateId,String paramsa){
-		// ¶ÌĞÅÓ¦ÓÃ SDK AppID
-		int appid = 1400279626; // SDK AppID ÒÔ1400¿ªÍ·
-		// ¶ÌĞÅÓ¦ÓÃ SDK AppKey
-		String appkey = "133c9f985f796b872e5a2461b40ae2ac";
-		// ĞèÒª·¢ËÍ¶ÌĞÅµÄÊÖ»úºÅÂë
-		// ¶ÌĞÅÄ£°å ID£¬ĞèÒªÔÚ¶ÌĞÅÓ¦ÓÃÖĞÉêÇë
-		// Ç©Ãû
-		String smsSign = "Ñ§Éú¸öÈËÑ§Ï°¿ª·¢Íø"; // NOTE: Ç©Ãû²ÎÊıÊ¹ÓÃµÄÊÇ`Ç©ÃûÄÚÈİ`£¬¶ø²»ÊÇ`Ç©ÃûID`¡£ÕâÀïµÄÇ©Ãû"ÌÚÑ¶ÔÆ"Ö»ÊÇÊ¾Àı£¬ÕæÊµµÄÇ©ÃûĞèÒªÔÚ¶ÌĞÅ¿ØÖÆÌ¨ÉêÇë
+		// çŸ­ä¿¡åº”ç”¨ SDK AppID
+		int appid = YourSdkAPPID; // SDK AppID ä»¥1400å¼€å¤´
+		// çŸ­ä¿¡åº”ç”¨ SDK AppKey
+		String appkey = "YourAppKey";
+		// éœ€è¦å‘é€çŸ­ä¿¡çš„æ‰‹æœºå·ç 
+		// çŸ­ä¿¡æ¨¡æ¿ IDï¼Œéœ€è¦åœ¨çŸ­ä¿¡åº”ç”¨ä¸­ç”³è¯·
+		// ç­¾å
+		String smsSign = "å­¦ç”Ÿä¸ªäººå­¦ä¹ å¼€å‘ç½‘"; // NOTE: ç­¾åå‚æ•°ä½¿ç”¨çš„æ˜¯`ç­¾åå†…å®¹`ï¼Œè€Œä¸æ˜¯`ç­¾åID`ã€‚è¿™é‡Œçš„ç­¾å"è…¾è®¯äº‘"åªæ˜¯ç¤ºä¾‹ï¼ŒçœŸå®çš„ç­¾åéœ€è¦åœ¨çŸ­ä¿¡æ§åˆ¶å°ç”³è¯·
 		try {
 			  String[] params = {paramsa};
 			  SmsSingleSender ssender = new SmsSingleSender(appid, appkey);
@@ -24,13 +24,13 @@ public class SendMsg {
 			      templateId, params, smsSign, "", "");
 			  System.out.println(result);
 			} catch (HTTPException e) {
-			  // HTTP ÏìÓ¦Âë´íÎó
+			  // HTTP å“åº”ç é”™è¯¯
 			  e.printStackTrace();
 			} catch (JSONException e) {
-			  // JSON ½âÎö´íÎó
+			  // JSON è§£æé”™è¯¯
 			  e.printStackTrace();
 			} catch (IOException e) {
-			  // ÍøÂç IO ´íÎó
+			  // ç½‘ç»œ IO é”™è¯¯
 			  e.printStackTrace();
 			}
 		return false;
