@@ -139,17 +139,20 @@
 		},
 		getaddress:function(){
 	    	$.ajax({
-					url : "https://api.asilu.com/geo?callback=?",
+					url : "https://apis.map.qq.com/ws/location/v1/ip?key=TKUBZ-D24AF-GJ4JY-JDVM2-IBYKK-KEBCU&output=jsonp&callback=?",//
 					dataType : "jsonp",
 					jsonp:"callback",
 					async : true,
 					type : "GET",
 					success : function(data) {
-						$("#city").html(data.address.replace(/市.*/, "市"));
+						var info = data.result.ad_info;
+						var result = info.province + info.city + info.district;
+						$("#city").html(result);
 					},
-					error : function() {
+					error : function() {//
 						//请求出错处理 
 						$("#city").html("中国");
+				//$("#city").html("广东省深圳市");
 						console.log("请求异常");
 					}
 			});

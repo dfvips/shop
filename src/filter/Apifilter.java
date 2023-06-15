@@ -65,8 +65,8 @@ public class Apifilter implements Filter {
 		HttpServletResponse res = (HttpServletResponse) response;
 		PrintWriter out = res.getWriter();
 		String referer = req.getHeader("Referer");
-		if (referer == null || (!referer.startsWith("http://localhost")&&!referer.startsWith("https://localhost")&&!referer.startsWith("https://shop.dfvips.com")&&!referer.startsWith("https://dfvips.com")&&!referer.startsWith("https://www.dfvips.com")&&!referer.startsWith("http://www.dfvips.com")&&!referer.startsWith("http://shop.dfvips.com")&&!referer.startsWith("http://dfvips.com"))) {
-			out.println("{\"state\":\"∑«∑®∑√Œ \"}");
+		if (referer == null || (!referer.startsWith("http://localhost")&&!referer.startsWith("http://127.0.0.1")&&!referer.startsWith("https://shop.dfvips.com")&&!referer.startsWith("https://dfvips.com")&&!referer.startsWith("https://www.dfvips.com")&&!referer.startsWith("http://www.dfvips.com")&&!referer.startsWith("http://shop.dfvips.com")&&!referer.startsWith("http://dfvips.com"))) {
+			out.println("{\"state\":\"ËØ∑Ê±ÇÂ§±Ë¥•\"}");
 		}else{
 			chain.doFilter(request, response);
 		}

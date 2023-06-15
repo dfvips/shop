@@ -3,8 +3,8 @@
 		loadcss: function() {
 			let flag = $.IsPC();
 			if (flag == true) {
-				if($('link[href="https://cdn.jsdelivr.net/gh/dfvips/shop/WebRoot/css/list_mobile.css"]')[0]!=undefined){
-					$('link[href="https://cdn.jsdelivr.net/gh/dfvips/shop/WebRoot/css/list_mobile.css"]')[0].setAttribute("href", "https://cdn.jsdelivr.net/gh/dfvips/shop/WebRoot/css/list_pc.css");
+				if($('link[href="css/list_mobile.css"]')[0]!=undefined){
+					$('link[href="css/list_mobile.css"]')[0].setAttribute("href", "css/list_pc.css");
 				}
 				$('html,body').animate({scrollTop: 61},500);
 				 let stateObject = {};    
@@ -12,8 +12,8 @@
 			  	 let newUrl = 'list';    
 				 history.pushState(stateObject, title, newUrl);
 			} else {
-				if($('link[href="https://cdn.jsdelivr.net/gh/dfvips/shop/WebRoot/css/list_pc.css"]')[0]!=undefined){
-					$('link[href="https://cdn.jsdelivr.net/gh/dfvips/shop/WebRoot/css/list_pc.css"]')[0].setAttribute("href", "https://cdn.jsdelivr.net/gh/dfvips/shop/WebRoot/css/list_mobile.css");
+				if($('link[href="css/list_pc.css"]')[0]!=undefined){
+					$('link[href="css/list_pc.css"]')[0].setAttribute("href", "css/list_mobile.css");
 				}
 				 let stateObject = {};    
 			 	 let title = $("title").html();     

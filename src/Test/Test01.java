@@ -11,18 +11,18 @@ public class Test01 {
 	public static void main(String[] args) {
 
 		/*
-		 * // 方式一：TreeMap可以自动排序 TreeMap<String, Object> params = new TreeMap<String,
+		 * // 鏂瑰紡涓�锛歍reeMap鍙互鑷姩鎺掑簭 TreeMap<String, Object> params = new TreeMap<String,
 		 * Object>(); setData(params);
 		 * 
 		 * StringBuilder s1 = new StringBuilder(); for (String key : params.keySet()) {
 		 * s1.append(key).append("=").append(params.get(key)).append("&"); }
 		 * s1.deleteCharAt(s1.length() - 1); System.out.println(s1);
 		 */
-		//方式二：使用HashMap，并使用Arrays.sort排序
+		//鏂瑰紡浜岋細浣跨敤HashMap锛屽苟浣跨敤Arrays.sort鎺掑簭
 		HashMap<String, Object> params2 = new HashMap<String, Object>();
 		setData(params2);
 		String[] sortedKeys = params2.keySet().toArray(new String[]{});
-		Arrays.sort(sortedKeys);// 排序请求参数
+		Arrays.sort(sortedKeys);// 鎺掑簭璇锋眰鍙傛暟
 		StringBuilder s2 = new StringBuilder();
         for (String key : sortedKeys) {
         	s2.append(key).append("=").append(params2.get(key)).append("&");

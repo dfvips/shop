@@ -25,7 +25,7 @@ public class GetHtmlSrc {
 			response.close(); 
 			httpClient.close(); 
       }catch (IOException e) {
-      	System.out.println("你输入的URL格式有问题！请仔细输�?");
+      	System.out.println("你输入的URL格式有问题！请仔细输��?");
       }    
 		return result;
 
@@ -42,7 +42,7 @@ public class GetHtmlSrc {
   			response.close(); 
   			httpClient.close(); 
         }catch (IOException e) {
-        	System.out.println("你输入的URL格式有问题！请仔细输�?");
+        	System.out.println("你输入的URL格式有问题！请仔细输��?");
         }    
   		return result;
 

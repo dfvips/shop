@@ -4,15 +4,15 @@ package tool;
 import java.security.MessageDigest;
  
 /**
- * @Description:MD5¼Ó½âÃÜ¹¤¾ß
+ * @Description:MD5åŠ è§£å¯†å·¥å…·
  * @author:liuyc
- * @time:2016Äê5ÔÂ23ÈÕ ÉÏÎç11:11:16
+ * @time:2016å¹´5æœˆ23æ—¥ ä¸Šåˆ11:11:16
  */
 public class Digest {
 	/**
-	 * @Description:¼ÓÃÜ-32Î»Ğ¡Ğ´
+	 * @Description:åŠ å¯†-32ä½å°å†™
 	 * @author:liuyc
-	 * @time:2016Äê5ÔÂ23ÈÕ ÉÏÎç11:15:33
+	 * @time:2016å¹´5æœˆ23æ—¥ ä¸Šåˆ11:15:33
 	 */
 	public static String encrypt32(String encryptStr) {
 		MessageDigest md5;
@@ -34,9 +34,9 @@ public class Digest {
 	}
  
 	/**
-	 * @Description:¼ÓÃÜ-16Î»Ğ¡Ğ´
+	 * @Description:åŠ å¯†-16ä½å°å†™
 	 * @author:liuyc
-	 * @time:2016Äê5ÔÂ23ÈÕ ÉÏÎç11:15:33
+	 * @time:2016å¹´5æœˆ23æ—¥ ä¸Šåˆ11:15:33
 	 */
 	public static String encrypt16(String encryptStr) {
 		return encrypt32(encryptStr).substring(8, 24);

@@ -12,7 +12,7 @@ public class Test {
 //		jsonobj.put("result","success");
 //		JSONArray jsonArrayphone = new JSONArray();  
 //		JSONObject jsonphone1 = new JSONObject();
-//		jsonphone1.element("name", "Ğ¡Ã×CC9 Pro");
+//		jsonphone1.element("name", "å°ç±³CC9 Pro");
 //		jsonphone1.element("img", "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/74bb2ad7cb8b3707d8fd9d596e1866e2.png");
 //		jsonphone1.element("link", "https://item.mi.com/10000198.html");
 //		JSONObject jsonphone2 = new JSONObject();
@@ -24,15 +24,15 @@ public class Test {
 //		jsonphone3.element("img", "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/47057d897ee2c05c9215e059e1308dc6.png");
 //		jsonphone3.element("link", "https://item.mi.com/10000198.html");
 //		JSONObject jsonphone4 = new JSONObject();
-//		jsonphone4.element("name", "Ğ¡Ã×MIX Alpha");
+//		jsonphone4.element("name", "å°ç±³MIX Alpha");
 //		jsonphone4.element("img", "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/74bb2ad7cb8b3707d8fd9d596e1866e2.png");
 //		jsonphone4.element("link", "https://item.mi.com/10000198.html");
 //		JSONObject jsonphone5 = new JSONObject();
-//		jsonphone5.element("name", "Ğ¡Ã×9 Pro 5G");
+//		jsonphone5.element("name", "å°ç±³9 Pro 5G");
 //		jsonphone5.element("img", "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/74bb2ad7cb8b3707d8fd9d596e1866e2.png");
 //		jsonphone5.element("link", "https://item.mi.com/10000198.html");
 //		JSONObject jsonphone6 = new JSONObject();
-//		jsonphone6.element("name", "Redmi K20 Pro ×ğÏí°æ");
+//		jsonphone6.element("name", "Redmi K20 Pro å°Šäº«ç‰ˆ");
 //		jsonphone6.element("img", "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/74bb2ad7cb8b3707d8fd9d596e1866e2.png");
 //		jsonphone6.element("link", "https://item.mi.com/10000198.html");
 //		JSONObject jsonphone7 = new JSONObject();
@@ -54,11 +54,11 @@ public class Test {
 //		System.out.print(jsonobj.toString());
 		/*
 		 * JSONObject jsonobj = new JSONObject(); jsonobj.put("result","success");
-		 * JSONArray jsonArrayphone=createJsonObj("Ğ¡Ã×ÊÖ»ú"); JSONArray
-		 * jsonArraytv=createJsonObj("Ğ¡Ã×µçÊÓ"); JSONArray
-		 * jsonArraypc=createJsonObj("Ğ¡Ã×±Ê¼Ç±¾"); JSONArray
-		 * jsonArrayearphone=createJsonObj("Ğ¡Ã×¶ú»ú"); JSONArray
-		 * jsonArraybind=createJsonObj("Ğ¡Ã×ÊÖ»·"); jsonobj.element("phone",
+		 * JSONArray jsonArrayphone=createJsonObj("å°ç±³æ‰‹æœº"); JSONArray
+		 * jsonArraytv=createJsonObj("å°ç±³ç”µè§†"); JSONArray
+		 * jsonArraypc=createJsonObj("å°ç±³ç¬”è®°æœ¬"); JSONArray
+		 * jsonArrayearphone=createJsonObj("å°ç±³è€³æœº"); JSONArray
+		 * jsonArraybind=createJsonObj("å°ç±³æ‰‹ç¯"); jsonobj.element("phone",
 		 * jsonArrayphone); jsonobj.element("tv", jsonArraytv); jsonobj.element("pc",
 		 * jsonArraypc); jsonobj.element("earphone", jsonArrayearphone);
 		 * jsonobj.element("other", jsonArraybind);

@@ -12,7 +12,7 @@ public class MybatisTest {
 	@Test
 	public void test() {
 		/* CustomerInfo result=null; */
-		SqlSession sqlSession = MybatisReader.getSession();
+//		SqlSession sqlSession = MybatisReader.getSession();
 		/*
 		 * CustomerInfo c = new CustomerInfo(); c.setEmail("420443292@qq.com");
 		 * Dbservice dbservice=new Dbservice(); result=dbservice.findCustomer(c);
@@ -56,7 +56,7 @@ public class MybatisTest {
 		 */
 		/*
 		 * JSONObject jsonobjout = new JSONObject(); GoodsmsgInfo g=new GoodsmsgInfo();
-		 * g.setName("Ð¡Ã×"); Dbservice dbservice=new Dbservice(); List<GoodsmsgInfo>
+		 * g.setName("Ð¡ï¿½ï¿½"); Dbservice dbservice=new Dbservice(); List<GoodsmsgInfo>
 		 * result=dbservice.searchgoods(g); if(result.size()!=0) {
 		 * jsonobjout.element("result","success"); JSONArray array=new JSONArray();
 		 * for(int i=0;i<result.size();i++) { GoodsmsgInfo
@@ -71,17 +71,17 @@ public class MybatisTest {
 		/*
 		 * Integer uid=11; String orderlist="cdscscd";
 		 */
-		Dbservice dbservice=new Dbservice();
-		OrderInfo i=new OrderInfo();
-		/*
-		 * i.setUid(uid); i.setOrderlist(orderlist); Integer
-		 * resultInteger=dbservice.insertorderlist(i);
-		 * System.out.println(resultInteger);
-		 */
-		i.setUid(2);
-		List<OrderInfo> result=null;
-		result=dbservice.searchlist(i);
-		System.out.print(result);
+//		Dbservice dbservice=new Dbservice();
+//		OrderInfo i=new OrderInfo();
+//		/*
+//		 * i.setUid(uid); i.setOrderlist(orderlist); Integer
+//		 * resultInteger=dbservice.insertorderlist(i);
+//		 * System.out.println(resultInteger);
+//		 */
+//		i.setUid(2);
+//		List<OrderInfo> result=null;
+//		result=dbservice.searchlist(i);
+//		System.out.print(result);
 	}
 
 }
