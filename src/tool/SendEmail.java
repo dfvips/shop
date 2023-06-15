@@ -6,45 +6,45 @@ public class SendEmail {
 	
 	public static boolean sendEmail(String emailaddress,String code,int id){
 		try {
-			HtmlEmail email = new HtmlEmail();//²»ÓÃ¸ü¸Ä
-//			email.setHostName("smtp.qq.com");//ĞèÒªĞŞ¸Ä£¬126ÓÊÏäÎªsmtp.126.com,163ÓÊÏäÎª163.smtp.com£¬QQÎªsmtp.qq.com
+			HtmlEmail email = new HtmlEmail();//ä¸ç”¨æ›´æ”¹
+//			email.setHostName("smtp.qq.com");//éœ€è¦ä¿®æ”¹ï¼Œ126é‚®ç®±ä¸ºsmtp.126.com,163é‚®ç®±ä¸º163.smtp.comï¼ŒQQä¸ºsmtp.qq.com
 //			email.setCharset("UTF-8");
-//			email.addTo(emailaddress);// ÊÕ¼şµØÖ·
+//			email.addTo(emailaddress);// æ”¶ä»¶åœ°å€
 //			email.setSSLOnConnect(true);
 //			email.setSSLCheckServerIdentity(true);
 //			email.setSmtpPort(587);
 ////			email.setSslSmtpPort("587");
-//			email.setFrom("dfvips@qq.com", "dreamfly");//´Ë´¦ÌîÓÊÏäµØÖ·ºÍÓÃ»§Ãû,ÓÃ»§Ãû¿ÉÒÔÈÎÒâÌîĞ´
+//			email.setFrom("dfvips@qq.com", "dreamfly");//æ­¤å¤„å¡«é‚®ç®±åœ°å€å’Œç”¨æˆ·å,ç”¨æˆ·åå¯ä»¥ä»»æ„å¡«å†™
 //			
-//			email.setAuthentication("dfvips@qq.com", "jwjnxnluxpsldaie");//´Ë´¦ÌîĞ´ÓÊÏäµØÖ·ºÍ¿Í»§¶ËÊÚÈ¨Âë
-			email.setHostName("smtp.qiye.aliyun.com");//ĞèÒªĞŞ¸Ä£¬126ÓÊÏäÎªsmtp.126.com,163ÓÊÏäÎª163.smtp.com£¬QQÎªsmtp.qq.com
+//			email.setAuthentication("dfvips@qq.com", "jwjnxnluxpsldaie");//æ­¤å¤„å¡«å†™é‚®ç®±åœ°å€å’Œå®¢æˆ·ç«¯æˆæƒç 
+			email.setHostName("smtp.qiye.aliyun.com");//éœ€è¦ä¿®æ”¹ï¼Œ126é‚®ç®±ä¸ºsmtp.126.com,163é‚®ç®±ä¸º163.smtp.comï¼ŒQQä¸ºsmtp.qq.com
 			email.setCharset("UTF-8");
-			email.addTo(emailaddress);// ÊÕ¼şµØÖ·
+			email.addTo(emailaddress);// æ”¶ä»¶åœ°å€
 			email.setSSLOnConnect(true);
 			email.setSSLCheckServerIdentity(true);
 			email.setSmtpPort(465);
 //			email.setSslSmtpPort("587");
-			email.setFrom("admin@dfvips.com", "dreamfly");//´Ë´¦ÌîÓÊÏäµØÖ·ºÍÓÃ»§Ãû,ÓÃ»§Ãû¿ÉÒÔÈÎÒâÌîĞ´
-			email.setAuthentication("admin@dfvips.com", "chen467663655.+");//´Ë´¦ÌîĞ´ÓÊÏäµØÖ·ºÍ¿Í»§¶ËÊÚÈ¨Âë
+			email.setFrom("admin@dfvips.com", "dreamfly");//æ­¤å¤„å¡«é‚®ç®±åœ°å€å’Œç”¨æˆ·å,ç”¨æˆ·åå¯ä»¥ä»»æ„å¡«å†™
+			email.setAuthentication("admin@dfvips.com", "YourPassword");//æ­¤å¤„å¡«å†™é‚®ç®±åœ°å€å’Œå®¢æˆ·ç«¯æˆæƒç 
 			
 			
  
-			email.setSubject("DreamFlyÊÖ»úÉÌ³Ç");//´Ë´¦ÌîĞ´ÓÊ¼şÃû£¬ÓÊ¼şÃû¿ÉÈÎÒâÌîĞ´
+			email.setSubject("DreamFlyæ‰‹æœºå•†åŸ");//æ­¤å¤„å¡«å†™é‚®ä»¶åï¼Œé‚®ä»¶åå¯ä»»æ„å¡«å†™
 			
 			if(id==0){
-				email.setMsg("<h2>×ğ¾´µÄÓÃ»§£º</h2>"+
+				email.setMsg("<h2>å°Šæ•¬çš„ç”¨æˆ·ï¼š</h2>"+
 						 
-				"<p style='text-indent:2em;display:block;margin-top:30px'>ÄúÕıÔÚĞŞ¸ÄÕËºÅĞÅÏ¢£¬ÑéÖ¤ÂëÊÇ <strong>"+code+"</strong>£¬¹¤×÷ÈËÔ±²»»áË÷È¡£¬ÇëÎğĞ¹Â©¡£</p>" +
-				"<p style='display:block;margin-top:30px'>´ËÖÂ</p>"
-				+"<p>À´×Ô DreamFlyÊÖ»úÉÌ³Ç</p>"
-						);//´Ë´¦ÌîĞ´ÓÊ¼şÄÚÈİ
+				"<p style='text-indent:2em;display:block;margin-top:30px'>æ‚¨æ­£åœ¨ä¿®æ”¹è´¦å·ä¿¡æ¯ï¼ŒéªŒè¯ç æ˜¯ <strong>"+code+"</strong>ï¼Œå·¥ä½œäººå‘˜ä¸ä¼šç´¢å–ï¼Œè¯·å‹¿æ³„æ¼ã€‚</p>" +
+				"<p style='display:block;margin-top:30px'>æ­¤è‡´</p>"
+				+"<p>æ¥è‡ª DreamFlyæ‰‹æœºå•†åŸ</p>"
+						);//æ­¤å¤„å¡«å†™é‚®ä»¶å†…å®¹
 			}else{
-				email.setMsg("<h2>×ğ¾´µÄÓÃ»§£º</h2>"+
+				email.setMsg("<h2>å°Šæ•¬çš„ç”¨æˆ·ï¼š</h2>"+
 						 
-				"<p style='text-indent:2em;display:block;margin-top:30px'>µÇÂ¼/×¢²áDreamFlyÊÖ»úÉÌ³Ç£¬ÑéÖ¤ÂëÊÇ <strong>"+code+"</strong>£¬ÇëÎğ×ª·¢¡£×¢²á½«°ó¶¨´Ë°²È«ÓÊÏä¡£</p>" +
-				"<p style='display:block;margin-top:30px'>´ËÖÂ</p>"
-				+"<p>À´×Ô DreamFlyÊÖ»úÉÌ³Ç</p>"
-						);//´Ë´¦ÌîĞ´ÓÊ¼şÄÚÈİ
+				"<p style='text-indent:2em;display:block;margin-top:30px'>ç™»å½•/æ³¨å†ŒDreamFlyæ‰‹æœºå•†åŸï¼ŒéªŒè¯ç æ˜¯ <strong>"+code+"</strong>ï¼Œè¯·å‹¿è½¬å‘ã€‚æ³¨å†Œå°†ç»‘å®šæ­¤å®‰å…¨é‚®ç®±ã€‚</p>" +
+				"<p style='display:block;margin-top:30px'>æ­¤è‡´</p>"
+				+"<p>æ¥è‡ª DreamFlyæ‰‹æœºå•†åŸ</p>"
+						);//æ­¤å¤„å¡«å†™é‚®ä»¶å†…å®¹
 			}
 			email.send();
 			return true;
