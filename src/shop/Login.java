@@ -255,7 +255,7 @@ public class Login extends HttpServlet {
 
 	public static void qqlogin(HttpServletRequest request, HttpServletResponse response) {
 		String code = request.getParameter("code");
-		String url = "https://graph.qq.com/oauth2.0/token?grant_type=authorization_code&client_id=101705620&client_secret=81d5dd8ea7450f4bb58335d14f08676f&code="
+		String url = "https://graph.qq.com/oauth2.0/token?grant_type=authorization_code&client_id=clientId&client_secret=&code="
 				+ code + "&redirect_uri=https://shop.dfvips.com/Login";
 		String result = GetHtmlSrc.GetHtml(url);
 		if (result != null) {
